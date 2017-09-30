@@ -60,27 +60,48 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "image.jpg";
+
+/***/ }),
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_jpg__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__image_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_xml___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__data_xml__);
+
+
 
 
 
 function component() {
   var element = document.createElement('div');
 
+  // Lodash, now imported by this script
   element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
   element.classList.add('hello');
+
+  // Add the image to our existing div.
+  var myImage1 = new Image();
+  myImage1.src = __WEBPACK_IMPORTED_MODULE_2__image_jpg___default.a;
+
+  element.appendChild(myImage1);
+
+  console.log(__WEBPACK_IMPORTED_MODULE_3__data_xml___default.a);
 
   return element;
 }
@@ -88,7 +109,7 @@ function component() {
 document.body.appendChild(component());
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17177,10 +17198,10 @@ document.body.appendChild(component());
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(3)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(4)(module)))
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 var g;
@@ -17207,7 +17228,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -17235,13 +17256,13 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(5);
+var content = __webpack_require__(6);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -17249,14 +17270,14 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(7)(content, options);
+var update = __webpack_require__(12)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./style.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./style.css");
+		module.hot.accept("!!../node_modules/css-loader/index.js??ref--0-1!./style.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js??ref--0-1!./style.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -17266,21 +17287,21 @@ if(false) {
 }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
+exports = module.exports = __webpack_require__(7)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".hello {\n  color: red;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Merriweather';\n  font-style: normal;\n  font-weight: 300;\n  src: local('Merriweather Light'), local('Merriweather-Light'), url(" + __webpack_require__(8) + ") format('woff2'), \n  url(" + __webpack_require__(9) + ") format('woff');\n  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */\n}\n\n@font-face {\n  font-family: 'Merriweather';\n  font-style: normal;\n  font-weight: 700;\n  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(" + __webpack_require__(10) + ") format('woff2'), \n  url(" + __webpack_require__(11) + ") format('woff');\n  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */\n}\n\nbody {\n  font-family: 'Merriweather', serif;\n}\n\n.hello {\n  color: red;\n  background: url(" + __webpack_require__(0) + ");\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 /*
@@ -17362,7 +17383,31 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "merriweather-light.woff2";
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "merriweather-light.woff";
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "merriweather-bold.woff2";
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "merriweather-bold.woff";
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -17408,7 +17453,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(8);
+var	fixUrls = __webpack_require__(13);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -17721,7 +17766,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 8 */
+/* 13 */
 /***/ (function(module, exports) {
 
 
@@ -17814,6 +17859,12 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = {"catalog":{"book":[{"$":{"id":"bk101"},"author":["Gambardella, Matthew"],"title":["XML Developer's Guide"],"genre":["Computer"],"price":["44.95"],"publish_date":["2000-10-01"],"description":["An in-depth look at creating applications\n      with XML."]},{"$":{"id":"bk102"},"author":["Ralls, Kim"],"title":["Midnight Rain"],"genre":["Fantasy"],"price":["5.95"],"publish_date":["2000-12-16"],"description":["A former architect battles corporate zombies,\n      an evil sorceress, and her own childhood to become queen\n      of the world."]},{"$":{"id":"bk103"},"author":["Corets, Eva"],"title":["Maeve Ascendant"],"genre":["Fantasy"],"price":["5.95"],"publish_date":["2000-11-17"],"description":["After the collapse of a nanotechnology\n      society in England, the young survivors lay the\n      foundation for a new society."]},{"$":{"id":"bk104"},"author":["Corets, Eva"],"title":["Oberon's Legacy"],"genre":["Fantasy"],"price":["5.95"],"publish_date":["2001-03-10"],"description":["In post-apocalypse England, the mysterious\n      agent known only as Oberon helps to create a new life\n      for the inhabitants of London. Sequel to Maeve\n      Ascendant."]},{"$":{"id":"bk105"},"author":["Corets, Eva"],"title":["The Sundered Grail"],"genre":["Fantasy"],"price":["5.95"],"publish_date":["2001-09-10"],"description":["The two daughters of Maeve, half-sisters,\n      battle one another for control of England. Sequel to\n      Oberon's Legacy."]},{"$":{"id":"bk106"},"author":["Randall, Cynthia"],"title":["Lover Birds"],"genre":["Romance"],"price":["4.95"],"publish_date":["2000-09-02"],"description":["When Carla meets Paul at an ornithology\n      conference, tempers fly as feathers get ruffled."]},{"$":{"id":"bk107"},"author":["Thurman, Paula"],"title":["Splish Splash"],"genre":["Romance"],"price":["4.95"],"publish_date":["2000-11-02"],"description":["A deep sea diver finds true love twenty\n      thousand leagues beneath the sea."]},{"$":{"id":"bk108"},"author":["Knorr, Stefan"],"title":["Creepy Crawlies"],"genre":["Horror"],"price":["4.95"],"publish_date":["2000-12-06"],"description":["An anthology of horror stories about roaches,\n      centipedes, scorpions  and other insects."]},{"$":{"id":"bk109"},"author":["Kress, Peter"],"title":["Paradox Lost"],"genre":["Science Fiction"],"price":["6.95"],"publish_date":["2000-11-02"],"description":["After an inadvertant trip through a Heisenberg\n      Uncertainty Device, James Salway discovers the problems\n      of being quantum."]},{"$":{"id":"bk110"},"author":["O'Brien, Tim"],"title":["Microsoft .NET: The Programming Bible"],"genre":["Computer"],"price":["36.95"],"publish_date":["2000-12-09"],"description":["Microsoft's .NET initiative is explored in\n      detail in this deep programmer's reference."]},{"$":{"id":"bk111"},"author":["O'Brien, Tim"],"title":["MSXML3: A Comprehensive Guide"],"genre":["Computer"],"price":["36.95"],"publish_date":["2000-12-01"],"description":["The Microsoft MSXML3 parser is covered in\n      detail, with attention to XML DOM interfaces, XSLT processing,\n      SAX and more."]},{"$":{"id":"bk112"},"author":["Galos, Mike"],"title":["Visual Studio 7: A Comprehensive Guide"],"genre":["Computer"],"price":["49.95"],"publish_date":["2001-04-16"],"description":["Microsoft Visual Studio 7 is explored in depth,\n      looking at how Visual Basic, Visual C++, C#, and ASP+ are\n      integrated into a comprehensive development\n      environment."]}]}}
 
 /***/ })
 /******/ ]);
