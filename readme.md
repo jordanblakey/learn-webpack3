@@ -66,15 +66,24 @@ Setup Dev Environment
 
 ### [Production](https://webpack.js.org/guides/production)
 
--
+- Setup
+- NPM Scripts
+- Minification
+- Source Mapping
+- Specify the Environment
+- CLI Alternatives
 
 ### [Code Splitting](https://webpack.js.org/guides/code-splitting)
 
--
+- Entry Points
+- Prevent Duplication
+- Dynamic Imports
+- Bundle Analysis
 
 ### [Lazy Loading](https://webpack.js.org/guides/lazy-loading)
 
--
+- Example
+- Frameworks
 
 ### [Caching](https://webpack.js.org/guides/caching)
 
@@ -86,11 +95,22 @@ Setup Dev Environment
 
 ### [Shimming](https://webpack.js.org/guides/shimming)
 
--
+- Shimming Globals
+- Granular Shimming
+- Global Exports
+- Loading Polyfills
+- Further Opimizations
+- Node Built-Ins
+- Other Utilities
 
 ### [Typescript](https://webpack.js.org/guides/typescript)
 
--
+- Basic Setup
+- Loader
+- Source Maps
+- Using TP Libraries
+- Importing Other Assets
+- Build Performance
 
 ### [Migrating Versions](https://webpack.js.org/guides/migrating-versions)
 
@@ -98,11 +118,28 @@ Setup Dev Environment
 
 ### [Environment Variables](https://webpack.js.org/guides/environment-variables)
 
--
-
 ### [Build Performance](https://webpack.js.org/guides/build-performance)
 
--
+- Stay Up to Date
+- Loaders
+- Bootstrap
+- Resolving
+- Dlls
+- Smaller = Faster
+- Worker Pool
+- Persistent Cache
+- Custom plugins/loaders
+- Development
+- Incremental builds
+- Compile in Memory
+- Devtool
+- Avoid Production Specific Tooling
+- Minimal Entry Chunk
+- Production
+- Multiple Compilations (Parralelization via worker pools)
+- Babel
+- Typescript
+- Sass
 
 ### [Development Vagrant](https://webpack.js.org/guides/development-vagrant)
 

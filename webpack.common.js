@@ -23,6 +23,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  },
   module: {
     rules: [{
         test: /\.css$/,
@@ -44,6 +47,11 @@ module.exports = {
             // name: '[name].[ext]'
           }
         }]
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,

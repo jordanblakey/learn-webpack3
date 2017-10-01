@@ -47,7 +47,7 @@ function getComponent() {
     btn.onclick = printMe;
     element.appendChild(btn);
 
-    element.innerHMTL = _.join(['Hello', 'Jordan!'], ' ');
+    element.innerHTML += _.join(['Hello', 'Jordan!'], ' ');
     element.innerHTML += "Hi there";
     return element;
   }).catch(error => 'Ann error occurred while loading the component');

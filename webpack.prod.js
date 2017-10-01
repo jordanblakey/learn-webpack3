@@ -4,7 +4,8 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-  devtool: 'cheap-module-source-map', // Production appropriate source maps
+  devtool: 'cheap-module-eval-source-map', // Production appropriate source maps
+  // devtool: 'cheap-module-source-map', // Production appropriate source maps
   // devtool: 'source-map', // Production appropriate source maps
   plugins: [
     new UglifyJSPlugin({
