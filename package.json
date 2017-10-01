@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
     "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open --hotOnly",
+    "build": "webpack --config webpack.prod.js",
+    "start": "webpack-dev-server --open --hotOnly --config webpack.dev.js",
     "server": "node server.js",
     "kill": "pkill -f webpack-dev-server; sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill"
   },
@@ -30,6 +30,7 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "webpack-merge": "^4.1.0"
   }
 }

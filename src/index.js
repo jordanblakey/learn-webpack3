@@ -8,6 +8,13 @@ import {
 } from './js/math.js';
 
 
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
+if (process.env.NODE_ENV == 'production') {
+  console.log('Looks like this code is running in production mode!');
+}
+
 function component2() {
   var element = document.createElement('pre');
 
