@@ -1,23 +1,26 @@
 const path = require('path'); // npm package for resolving file paths
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Webpack plugin as npm package
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // Webpack plugin as npm package
+const webpack = require('webpack');
 
 module.exports = {
   entry: { // Entry points/module definition for bundle.js
     index: './src/index.js',
-    app: './src/index.js',
-    print: './src/print.js'
+    // app: './src/index.js',
+    // print: './src/print.js'
   },
   devtool: 'inline-source-map', // Compile with source maps for easy debugging
   devServer: {
     contentBase: './dist', // Public folder for dev server
-    port: '3000'
+    port: '80',
+    hot: true
   },
   plugins: [
     new CleanWebpackPlugin(['dist']), // Clear the dist folder on build
     new HtmlWebpackPlugin({ // Build Html files for Webpack, using all entry points by default or templates if defined
       title: 'Output Management'
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   output: {
     filename: 'bundle.js', // create monolithic bundle.js

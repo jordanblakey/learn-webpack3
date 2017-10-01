@@ -34,7 +34,7 @@
 - The Manifest
 - Conclusion
 
-###[Development](https://webpack.js.org/guides/development)
+### [Development](https://webpack.js.org/guides/development)
 
 - Using Source Maps
 - Choosing a Development Tool

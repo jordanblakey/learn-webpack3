@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open",
-    "server": "node server.js"
+    "start": "webpack-dev-server --open --hotOnly",
+    "server": "node server.js",
+    "kill": "pkill -f webpack-dev-server; sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.9.1",
+    "webpack-hot-middleware": "^2.19.1",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
