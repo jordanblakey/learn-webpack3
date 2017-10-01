@@ -1,20 +1,25 @@
 const path = require('path'); // npm package for resolving file paths
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Webpack plugin as npm package
 const CleanWebpackPlugin = require('clean-webpack-plugin'); // Webpack plugin as npm package
+const webpack = require('webpack');
 
 module.exports = {
   entry: { // Entry points/module definition for bundle.js
-    index: './src/index.js',
+    index: './src/index.js'
+    // another: './src/js/another-module.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist']), // Clear the dist folder on build
     new HtmlWebpackPlugin({ // Build Html files for Webpack, using all entry points by default or templates if defined
       title: 'Output Management'
-    }),
+    })
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'common' // Specify the common bundle's name.
+    // })
   ],
   output: {
     filename: 'bundle.js', // create monolithic bundle.js
-    filename: '[name].bundle.js', // create bundle for including only each entry point
+    chunkFilename: '[name].bundle.js', // create bundle for including only each entry point
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
