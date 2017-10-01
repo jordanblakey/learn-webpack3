@@ -1,5 +1,13 @@
 # [Learning Webpack 3](https://webpack.js.org)
 
+Setup Dev Environment
+`git clone git@github.com:jordanblakey/learn-webpack3.git`
+`cd learn-webpack3/; `
+`npm install`: Get all dependencies
+`npm run kill`: Kill any process using port 80
+`npm start`: Start the dev server at localhost:80
+`npm build`: Build production files
+
 ## Concepts Learned
 
 ### [Installation](https://webpack.js.org/guides/installation)
@@ -45,11 +53,16 @@
 
 ### [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement)
 
--
+- Enabling HMR
+- Via the Node.js API
+- Gotchas
+- HMR with Stylesheets
+- HMR with Other Frameworks
 
 ### [Tree Shaking](https://webpack.js.org/guides/tree-shaking)
 
--
+- Add a Utility
+- Minify the Output
 
 ### [Production](https://webpack.js.org/guides/production)
 
