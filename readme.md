@@ -34,6 +34,15 @@
 - The Manifest
 - Conclusion
 
+###[Development](https://webpack.js.org/guides/development)
+
+- Using Source Maps
+- Choosing a Development Tool
+- Using Watch Mode
+- Using webpack-dev-server
+- Using webpack-dev-middleware
+- Adjusting your text editor
+
 ### [Hot Module Replacement](https://webpack.js.org/guides/hot-module-replacement)
 
 -

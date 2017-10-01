@@ -1,35 +1,39 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path'); // npm package for resolving file paths
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // Webpack plugin as npm package
+const CleanWebpackPlugin = require('clean-webpack-plugin'); // Webpack plugin as npm package
 
 module.exports = {
-  entry: {
+  entry: { // Entry points/module definition for bundle.js
     index: './src/index.js',
     app: './src/index.js',
     print: './src/print.js'
   },
+  devtool: 'inline-source-map', // Compile with source maps for easy debugging
+  devServer: {
+    contentBase: './dist', // Public folder for dev server
+    port: '3000'
+  },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
+    new CleanWebpackPlugin(['dist']), // Clear the dist folder on build
+    new HtmlWebpackPlugin({ // Build Html files for Webpack, using all entry points by default or templates if defined
       title: 'Output Management'
     })
   ],
   output: {
-    filename: 'bundle.js',
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'bundle.js', // create monolithic bundle.js
+    filename: '[name].bundle.js', // create bundle for including only each entry point
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
     rules: [{
         test: /\.css$/,
-        use: [
-          // Add CSS in <style tags>
-          {
-            loader: 'style-loader',
+        use: [{
+            loader: 'style-loader', // Add CSS in <style tags>
             options: {}
           },
           {
-            loader: 'css-loader',
+            loader: 'css-loader', // Move CSS files to dist on build/watch
             options: {}
           }
         ]
@@ -37,7 +41,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [{
-          loader: 'file-loader',
+          loader: 'file-loader', // Move image files to dist on build/watch.
           options: {
             // name: '[name].[ext]'
           }
@@ -46,7 +50,7 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [{
-          loader: 'file-loader',
+          loader: 'file-loader', // Move font files to dist on build/watch.
           options: {
             // name: '[name].[ext]'
           }
@@ -54,15 +58,15 @@ module.exports = {
       },
       {
         test: /\.(csv|tsv$)$/,
-        use: [
-          'csv-loader'
-        ]
+        use: [{
+          loader: 'csv-loader' // Move csv files to dist on build.
+        }]
       },
       {
         test: /\.xml$/,
-        use: [
-          'xml-loader'
-        ]
+        use: [{
+          loader: 'xml-loader' // Move xml files to dist on build.
+        }]
       }
     ]
   }
